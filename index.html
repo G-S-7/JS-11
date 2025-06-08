@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background: white;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background: rgb(244, 244, 244);
+      padding: 30px 40px;
+      box-shadow: -2px 4px rgba(0, 0, 0, 0.3);
+      width: 300px;
+      text-align: center;
+    }
+
+    .title {
+      font-family: 'Lucida Calligraphy', cursive;
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    .icon-box {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid #ccc;
+    }
+
+    .icon-box i {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .input-group input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #0095f6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    button:hover {
+      background: #007cd1;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .signup {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    a {
+      color: rgb(0, 118, 165);
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2 class="title">Instagram</h2>
+
+    <div class="input-group">
+      <span class="icon-box">
+        <i class="fas fa-user"></i>
+      </span>
+      <input type="text" placeholder="Username" id="input1" />
+    </div>
+
+    <div class="input-group">
+      <span class="icon-box">
+        <i class="fas fa-lock"></i>
+      </span>
+      <input type="password" placeholder="Password" id="input2"/>
+    </div>
+
+    <button type="submit" onclick="validate()">Log in</button>
+
+    <div class="options">
+      <label><input type="checkbox" /> Remember me</label>
+      <a href="#">Forgot Password?</a>
+    </div>
+  </div>
+
+  <div class="signup">
+    Don't have an account? <a href="#">Sign up here.</a>
+  </div>
+</body>
+<script>
+  function validate(){
+    var x  = document.getElementById("input1").value;
+    var y  = document.getElementById("input2").value;
+    if(x=="" || y==""){
+      window.alert("Enter your username and password to log in.")
+    }
+  }
+</script>
+</html>
